@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>ost-ticket-probe</AssemblyName>
+    <RootNamespace>OpenSteamTool.Probe</RootNamespace>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <!-- 直接复用启动器的内置提取实现，避免两份逻辑漂移 -->
+  <ItemGroup>
+    <Compile Include="..\OpenSteamTool.Launcher\Services\SteamTicketReader.cs" Link="Shared\SteamTicketReader.cs" />
+    <Compile Include="..\OpenSteamTool.Launcher\Services\TicketTool.cs" Link="Shared\TicketTool.cs" />
+  </ItemGroup>
+
+</Project>

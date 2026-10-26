@@ -2,6 +2,10 @@
 build/
 .deps/
 
+# Launcher (.NET)
+launcher/**/bin/
+launcher/**/obj/
+
 # Visual Studio
 *.user
 *.suo
